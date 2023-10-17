@@ -1,0 +1,25 @@
+<mat-card class="example-card" *ngFor="let book of books">
+  <mat-card-header>
+    <mat-card-title>{{book.title}}</mat-card-title>
+    <mat-card-subtitle>{{book.author}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      Sinopse: {{book.synopsis}}.
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <input placeholder="Editar  título" [(ngModel)]="renameTitle"><br>
+    <input  placeholder="Editar autor" [(ngModel)]="renameAuthor"><br>
+    <input placeholder="Editar sinopse"  [(ngModel)]="renameSynopsis"><br>
+
+    <button  mat-raised-button color="warn" (click)="editBook(book)">Editar</button>
+    <button  mat-raised-button color="basic" (click)="deleteBook(book)">Deletar</button>
+  </mat-card-actions>
+  <mat-chip-listbox aria-label="Fish selection">
+    <mat-chip-option selected>Em estoque</mat-chip-option>
+    <mat-chip-option color="warn">Esgotado</mat-chip-option>
+    <mat-chip-option color="accent">Outro?</mat-chip-option>
+  </mat-chip-listbox>
+</mat-card>
+

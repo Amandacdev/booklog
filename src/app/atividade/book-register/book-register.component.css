@@ -1,0 +1,32 @@
+*{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+mat-card {
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: rgba(10, 1, 9, 0.84);
+  color: whitesmoke;
+  font-size: 18px;
+  width:85%;
+  padding: 40px;
+  margin:20px;
+}
+
+mat-card-subtitle{
+  color: whitesmoke;
+}
+
+p{
+  font-size: 12px;
+}
+
+mat-card-content{
+  padding: 40px;
+}
+
+button{
+  width: 300px;
+  align-content: center;
+}
