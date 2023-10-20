@@ -35,4 +35,4 @@ import {MatChipsModule} from "@angular/material/chips";
         MatChipsModule
     ]
 })
-export class AtividadeModule { }
+export class BookModule { }
