@@ -1,0 +1,6 @@
+<header>
+<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item [routerLink]="['/book-register']">Cadastrar Livros</button>
+</mat-menu>
+</header>
