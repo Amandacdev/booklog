@@ -12,7 +12,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 
 import {MatBadgeModule} from '@angular/material/badge';
-import {AtividadeModule} from "./atividade/atividade.module";
+import {BookModule} from "./book/book.module";
 import {MatChipsModule} from '@angular/material/chips';
 import{AppRoutingModule} from "./app-routing.module";
 import {MenuComponent} from "./layout/menu/menu.component";
@@ -34,7 +34,7 @@ import {MatMenuModule} from "@angular/material/menu";
     MatIconModule,
     MatCardModule,
     MatBadgeModule,
-    AtividadeModule,
+    BookModule,
     AppRoutingModule,
     MatChipsModule,
     MatMenuModule
