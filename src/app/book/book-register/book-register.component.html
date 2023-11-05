@@ -1,10 +1,10 @@
-<mat-card class="mat-card-inicio">
+<mat-card class="register-book">
   <mat-card-header>
    <mat-card-title [matBadge]="books.length" matBadgeOverlap="false" matBadgeColor="accent" class="demo-section">Registre os livros!</mat-card-title>
-    <mat-card-subtitle>Preencha os campos abaixo</mat-card-subtitle>
+    <mat-card-subtitle  class="register-book-subtitle">Preencha os campos abaixo</mat-card-subtitle>
   </mat-card-header>
 
-  <mat-card-content>
+  <mat-card-content class="book-register">
     Título: <mat-form-field appearance="fill" class="mat-form-principal">
     <mat-label>Escreva o título</mat-label>
     <input matInput [(ngModel)]="bookToRegister.title"><br>
@@ -22,6 +22,6 @@
   </mat-card-content>
 
   <mat-card-footer>
-    <button mat-raised-button color="warn" (click)="insertBook()">Cadastrar livro</button>
+    <button class="button-book-register" mat-raised-button color="warn" (click)="insertBook()">Cadastrar livro</button>
   </mat-card-footer>
 </mat-card>

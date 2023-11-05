@@ -2,7 +2,7 @@
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-mat-card {
+.register-book{
   justify-content: center;
   align-items: center;
   border-radius: 20px;
@@ -14,19 +14,15 @@ mat-card {
   margin:20px;
 }
 
-mat-card-subtitle{
+.register-book-subtitle{
   color: whitesmoke;
 }
 
-p{
-  font-size: 12px;
-}
-
-mat-card-content{
+.book-register{
   padding: 40px;
 }
 
-button{
+.button-book-register{
   width: 300px;
   align-content: center;
 }

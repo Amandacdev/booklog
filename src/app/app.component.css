@@ -1,18 +1,16 @@
+
 *{
   justify-content: center;
   align-items: center;
-
 }
 
-.inicio{
+.container-begin{
   background-color: #ffffff;
-  margin: 10px 30px 10px 30px;
+  margin:2% 8% 2% 8%;
 }
 
 app-book-list{
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto auto;
 }
-
-
 

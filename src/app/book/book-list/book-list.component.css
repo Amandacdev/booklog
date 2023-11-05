@@ -1,20 +1,23 @@
-mat-card {
+.book-card {
   border-radius: 20px;
   background-color: rgba(217, 213, 217, 0.84);
   font-size: 18px;
   margin:10px;
   padding: 40px;
+  width: 300px;
+  height: 90%;
+  text-align: center;
 }
 
-mat-card-subtitle{
+.book-subtitle{
   color: black;
 }
 
-mat-card-content{
-  padding: 15px;
+.book-img {
+  background-size: cover;
 }
 
-button{
-  padding:10px;
-  margin:10px;
+.book-buttons{
+  align-content: center;
+  display: inline-flex;
 }

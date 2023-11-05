@@ -1,26 +1,37 @@
-<mat-card class="example-card" *ngFor="let book of books">
+<mat-card class="book-card" *ngFor="let book of books">
+  <img class="book-img" mat-card-image src="{{book.image}}" alt="book cover">
   <mat-card-header>
     <mat-card-title>{{book.title}}</mat-card-title>
-    <mat-card-subtitle>{{book.author}}</mat-card-subtitle>
+    <mat-card-subtitle class="book-subtitle" >{{book.author}}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-md-image src="{{book.image}}" alt="book cover">
-  <mat-card-content>
-    <p>
-      Sinopse: {{book.synopsis}}.
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <input placeholder="Editar  título" [(ngModel)]="renameTitle"><br>
-    <input  placeholder="Editar autor" [(ngModel)]="renameAuthor"><br>
-    <input placeholder="Editar sinopse"  [(ngModel)]="renameSynopsis"><br>
 
-    <button  mat-raised-button color="warn" (click)="editBook(book)">Editar</button>
-    <button  mat-raised-button color="basic" (click)="deleteBook(book)">Deletar</button>
-  </mat-card-actions>
-  <mat-chip-listbox aria-label="Fish selection">
-    <mat-chip-option selected>Em estoque</mat-chip-option>
-    <mat-chip-option color="warn">Esgotado</mat-chip-option>
-    <mat-chip-option color="accent">Outro?</mat-chip-option>
-  </mat-chip-listbox>
+  <mat-card-content class="book-synopsis">
+    <p> R$ {{book.price}} </p>
+    <div class="book-buttons">
+      <button mat-raised-button color="primary" >
+        <mat-icon>favorite</mat-icon>
+        Comprar
+      </button>
+
+      <button mat-raised-button
+              matTooltip="{{book.synopsis}}"
+              aria-label="button that displays the synopsis when focused or hovered over">
+        <mat-icon>book</mat-icon>
+
+        Sinopse
+      </button>
+    </div>
+  </mat-card-content>
+  <!--
+    <mat-card-actions>
+      <input placeholder="Editar  título" [(ngModel)]="renameTitle"><br>
+      <input  placeholder="Editar autor" [(ngModel)]="renameAuthor"><br>
+      <input placeholder="Editar sinopse"  [(ngModel)]="renameSynopsis"><br>
+
+      <button  mat-raised-button color="warn" (click)="editBook(book)">Editar</button>
+      <button  mat-raised-button color="basic" (click)="deleteBook(book)">Deletar</button>
+
+    </mat-card-actions>
+    -->
 </mat-card>
 
