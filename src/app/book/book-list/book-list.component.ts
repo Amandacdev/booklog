@@ -11,7 +11,7 @@ import {BOOKS} from "../../shared/model/BOOKS";
 export class BookListComponent {
   title = 'Booklog';
   books: Book[] = BOOKS;
-  book: Book = new Book("", "", "");
+  book: Book = new Book("", "", "", '', 0);
   editorMode = false;
 
   renameTitle: string = '';

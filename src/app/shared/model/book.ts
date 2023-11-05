@@ -1,6 +1,7 @@
 export class Book {
 
-  constructor(private _title: string, private _author: string, private _synopsis: string) {
+  constructor(private _title: string, private _author: string, private _synopsis: string,
+              private _image: string, private _price: number) {
   }
 
   get title(): string {
@@ -25,5 +26,21 @@ export class Book {
 
   set synopsis(newSynopsis: string) {
     this._synopsis = newSynopsis;
+  }
+
+  get image(): string {
+    return this._image;
+  }
+
+  set image(newImage: string) {
+    this._image = newImage;
+  }
+
+  get price(): number {
+    return this._price;
+  }
+
+  set price(newPrice: number) {
+    this._price = newPrice;
   }
 }

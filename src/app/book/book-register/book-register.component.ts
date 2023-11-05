@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {Book} from "../../shared/model/book";
 import {BOOKS} from "../../shared/model/BOOKS";
 
@@ -16,12 +16,12 @@ export class BookRegisterComponent {
   editorMode = false;
 
   constructor() {
-    this.bookToRegister = new Book('','','')
+    this.bookToRegister = new Book('','','', '', 0)
   }
 
   insertBook(): void {
     this.books.push(this.bookToRegister);
-    this.bookToRegister = new Book('','','')
+    this.bookToRegister = new Book('','','', '', 0)
   }
 
   //protected readonly BOOKS = BOOKS;
