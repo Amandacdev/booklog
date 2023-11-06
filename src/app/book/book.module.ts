@@ -14,6 +14,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatChipsModule} from "@angular/material/chips";
 import {MatTooltipModule} from "@angular/material/tooltip";
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import {MatTooltipModule} from "@angular/material/tooltip";
         MatIconModule,
         MatDividerModule,
         MatChipsModule,
-        MatTooltipModule
+        MatTooltipModule,
+        FlexLayoutModule
     ]
 })
 export class BookModule { }

@@ -6,6 +6,11 @@ import {BookListComponent} from "./book/book-list/book-list.component";
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'book-list',
+    pathMatch: 'full'
+  },
+  {
     path: "book-register",
     component: BookRegisterComponent
   },

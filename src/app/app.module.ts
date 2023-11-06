@@ -17,28 +17,32 @@ import {MatChipsModule} from '@angular/material/chips';
 import{AppRoutingModule} from "./app-routing.module";
 import {MenuComponent} from "./layout/menu/menu.component";
 import {MatMenuModule} from "@angular/material/menu";
+import {FlexLayoutModule} from "@angular/flex-layout";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    BrowserAnimationsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatIconModule,
-    MatCardModule,
-    MatBadgeModule,
-    BookModule,
-    AppRoutingModule,
-    MatChipsModule,
-    MatMenuModule
-  ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        FormsModule,
+        BrowserAnimationsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        MatIconModule,
+        MatCardModule,
+        MatBadgeModule,
+        BookModule,
+        AppRoutingModule,
+        MatChipsModule,
+        MatMenuModule,
+        FlexLayoutModule,
+        HttpClientModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

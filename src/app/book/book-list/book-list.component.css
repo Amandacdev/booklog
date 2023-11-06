@@ -11,13 +11,6 @@
 
 .book-subtitle{
   color: black;
+  margin-bottom: 10px;
 }
 
-.book-img {
-  background-size: cover;
-}
-
-.book-buttons{
-  align-content: center;
-  display: inline-flex;
-}
