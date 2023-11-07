@@ -1,6 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {Book} from "../../shared/model/book";
 import {BookService} from "../../shared/services/book.service";
+//import {DialogsComponent} from "../../shared/dialogs/dialogs.component";
+//import {MatDialogRef} from "@angular/material/dialog";
+
 
 @Component({
   selector: 'app-book-list',
@@ -14,6 +17,7 @@ export class BookListComponent implements OnInit {
   constructor(private bookService: BookService) {
     this.books = [];
   }
+
 
   ngOnInit() {
     this.bookService.listar().subscribe(books => this.books = books);
@@ -57,5 +61,6 @@ export class BookListComponent implements OnInit {
   //   }
   //
   // }
+
 }
 

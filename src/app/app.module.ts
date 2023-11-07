@@ -19,11 +19,14 @@ import {MenuComponent} from "./layout/menu/menu.component";
 import {MatMenuModule} from "@angular/material/menu";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {HttpClientModule} from "@angular/common/http";
+import {MatDialogModule} from '@angular/material/dialog';
+import { DialogsComponent } from './shared/dialogs/dialogs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent,
+    DialogsComponent
   ],
     imports: [
         BrowserModule,
@@ -41,7 +44,8 @@ import {HttpClientModule} from "@angular/common/http";
         MatChipsModule,
         MatMenuModule,
         FlexLayoutModule,
-        HttpClientModule
+        HttpClientModule,
+        MatDialogModule
     ],
   providers: [],
   bootstrap: [AppComponent]

@@ -15,6 +15,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatChipsModule} from "@angular/material/chips";
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {FlexLayoutModule} from "@angular/flex-layout";
+import {MatDialogModule} from "@angular/material/dialog";
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import {FlexLayoutModule} from "@angular/flex-layout";
         MatDividerModule,
         MatChipsModule,
         MatTooltipModule,
-        FlexLayoutModule
+        FlexLayoutModule,
+        MatDialogModule
     ]
 })
 export class BookModule { }

@@ -1,24 +1,41 @@
 <mat-card class="register-book">
+
   <mat-card-header>
-   <mat-card-title [matBadge]="booksAmount" matBadgeOverlap="false" matBadgeColor="accent" class="demo-section">Registre os livros!</mat-card-title>
+    <mat-card-title [matBadge]="booksAmount" matBadgeOverlap="false" matBadgeColor="accent" class="demo-section">Registre os livros!</mat-card-title>
     <mat-card-subtitle  class="register-book-subtitle">Preencha os campos abaixo</mat-card-subtitle>
   </mat-card-header>
 
   <mat-card-content class="book-register">
-    Título: <mat-form-field appearance="fill" class="mat-form-principal">
-    <mat-label>Escreva o título</mat-label>
-    <input matInput [(ngModel)]="book.title"><br>
-  </mat-form-field>
+    Título:
+    <mat-form-field appearance="fill" class="mat-form-principal">
+      <mat-label>Escreva o título</mat-label>
+      <input matInput [(ngModel)]="book.title"><br>
+    </mat-form-field>
 
-    Autor: <mat-form-field appearance="fill" class="mat-form-principal">
-    <mat-label>Escreva o autor</mat-label>
-    <input matInput [(ngModel)]="book.author"><br>
-  </mat-form-field>
+    Autor:
+    <mat-form-field appearance="fill" class="mat-form-principal">
+      <mat-label>Escreva o autor</mat-label>
+      <input matInput [(ngModel)]="book.author"><br>
+    </mat-form-field>
 
-    Sinopse:<mat-form-field appearance="fill" class="mat-form-principal">
-    <mat-label>Escreva a sinopse</mat-label>
-    <input matInput [(ngModel)]="book.synopsis"><br>
-  </mat-form-field>
+    Sinopse:
+    <mat-form-field appearance="fill" class="mat-form-principal">
+      <mat-label>Escreva a sinopse</mat-label>
+      <input matInput [(ngModel)]="book.synopsis"><br>
+    </mat-form-field>
+
+    Preço:
+    <mat-form-field appearance="fill" class="mat-form-principal">
+      <input matInput [(ngModel)]="book.price"><br>
+    </mat-form-field>
+
+   Link para Capa (URL):
+    <mat-form-field appearance="fill" class="mat-form-principal">
+      <mat-label>Escreva a URL da Capa</mat-label>
+      <input matInput [(ngModel)]="book.image"><br>
+    </mat-form-field>
+
+
   </mat-card-content>
 
   <mat-card-footer>
