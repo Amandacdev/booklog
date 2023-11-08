@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Book} from "../../shared/model/book";
 import {BookService} from "../../shared/services/book.service";
-//import {DialogsComponent} from "../../shared/dialogs/dialogs.component";
-//import {MatDialogRef} from "@angular/material/dialog";
+import {MatDialog} from "@angular/material/dialog";
+import {DialogsComponent} from "../../shared/dialogs/dialogs.component";
 
 
 @Component({
@@ -14,10 +14,28 @@ import {BookService} from "../../shared/services/book.service";
 export class BookListComponent implements OnInit {
   books: Array<Book>;
 
-  constructor(private bookService: BookService) {
+  //Control variables to allow the display or not of certain buttons (administrator or client)
+  showButtons1 = true;    //buttons for customer: 'Sinopses' or 'Comprar'
+  showButtons2 = false;   //buttons for administrator: 'Editar' or 'Remover'
+  changeButtonText = 'Mudar para Modo Adm';
+
+  constructor(private bookService: BookService, public dialog: MatDialog) {
     this.books = [];
   }
 
+  changeDisplayOfButtons() {
+    if (this.changeButtonText === 'Mudar para Modo Adm') {
+        this.changeButtonText = 'Mudar para Modo Cliente';
+        this.showButtons1 = false;
+        this.showButtons2 = true;
+    } else {
+        this.changeButtonText = 'Mudar para Modo Adm';
+        this.showButtons1 = true;
+        this.showButtons2 = false;
+    }
+
+
+  }
 
   ngOnInit() {
     this.bookService.listar().subscribe(books => this.books = books);
@@ -33,6 +51,21 @@ export class BookListComponent implements OnInit {
 
   teste() {
     console.log(this.books)
+  }
+
+  //Function to display modal (dialog) that displays the synopsis
+  openSynopsis(book: { synopsis: any; }): void {
+    const dialogRef = this.dialog.open(DialogsComponent,
+        {
+      width: '550px',
+      enterAnimationDuration:'500ms',
+      exitAnimationDuration: '100ms',
+      data: {synopsis: book.synopsis}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 
   // books: Book[] = BOOKS;
@@ -61,6 +94,7 @@ export class BookListComponent implements OnInit {
   //   }
   //
   // }
+
 
 }
 

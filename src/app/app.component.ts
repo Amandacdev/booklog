@@ -13,15 +13,4 @@ export class AppComponent {
       public dialog: MatDialog
   ) { }
 
-
-  openSinopsys(): void {
-    const dialogRef = this.dialog.open(DialogsComponent, {
-      width: '250px'
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
-  }
-
 }

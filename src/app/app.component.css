@@ -1,4 +1,6 @@
 .container-begin{
-  background-color: #ffffff;
-  margin:2% 8% 2% 8%;
+  background: #b0a8a8;
+  margin:2% 8% 35% 8%;
+  border-top-left-radius: 2rem;
+
 }

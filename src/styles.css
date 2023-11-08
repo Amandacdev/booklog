@@ -3,11 +3,5 @@ html, body { height: 100%; }
 body {
     margin:0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
-    background-color: #030333;
+    background:  #89909f;
 }
-
-
-/*background-size: contain;
- background: linear-gradient(#0a0a0a, transparent),
-*linear-gradient(to top left, #1a1762, transparent),
- linear-gradient(to top right, #030333, transparent);*/

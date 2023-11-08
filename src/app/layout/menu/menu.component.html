@@ -1,7 +1,9 @@
-<div class="menu-container">
+<div class="menu-container"  fxLayout="row" fxLayoutAlign="space-between none">
     <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
     <mat-menu #menu="matMenu">
         <button mat-menu-item [routerLink]="['/book-register']">Cadastrar Livros</button>
         <button mat-menu-item [routerLink]="['/book-list']">Listar Livros</button>
     </mat-menu>
+
+    <button mat-raised-button style="background-color: #89909f; color: beige">Mudar para Modo Administrador</button>
 </div>
