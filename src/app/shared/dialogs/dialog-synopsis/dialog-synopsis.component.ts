@@ -4,17 +4,17 @@ import {MatDialogRef} from "@angular/material/dialog";
 import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-dialogs',
-  templateUrl: './dialogs.component.html',
-  styleUrls: ['./dialogs.component.css']
+  selector: 'app-dialog-synopsis',
+  templateUrl: './dialog-synopsis.component.html',
+  styleUrls: ['./dialog-synopsis.component.css']
 })
-export class DialogsComponent {
+export class DialogSynopsisComponent {
   constructor(
-      public dialogRef: MatDialogRef<DialogsComponent>,
+      public dialogRef: MatDialogRef<DialogSynopsisComponent>,
       @Inject(MAT_DIALOG_DATA) public data: {synopsis: any}
   ) { }
 
-  close(): void {
+  closeDialog(): void {
     this.dialogRef.close();
   }
 }

@@ -2,7 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {Book} from "../../shared/model/book";
 import {BookService} from "../../shared/services/book.service";
 import {MatDialog} from "@angular/material/dialog";
-import {DialogsComponent} from "../../shared/dialogs/dialogs.component";
+import {DialogSynopsisComponent} from "../../shared/dialogs/dialog-synopsis/dialog-synopsis.component";
+import {DialogEditComponent} from "../../shared/dialogs/dialog-edit/dialog-edit.component";
 
 
 @Component({
@@ -23,6 +24,7 @@ export class BookListComponent implements OnInit {
     this.books = [];
   }
 
+  //Function to change button views - 'Administrador' or 'Cliente'
   changeDisplayOfButtons() {
     if (this.changeButtonText === 'Mudar para Modo Adm') {
         this.changeButtonText = 'Mudar para Modo Cliente';
@@ -33,8 +35,6 @@ export class BookListComponent implements OnInit {
         this.showButtons1 = true;
         this.showButtons2 = false;
     }
-
-
   }
 
   ngOnInit() {
@@ -45,17 +45,26 @@ export class BookListComponent implements OnInit {
     // A implementar
   }
 
-  editar(book: Book): void {
-    // A implementar
-  }
+  //Function to display modal (dialog) that edit book's info
+  openEditDialog(book: {title: string, author: string, synopsis: string, image: string, price: number}): void {
+    const dialogRef = this.dialog.open(DialogEditComponent,
+        {
+          width: '950px',
+          enterAnimationDuration:'500ms',
+          exitAnimationDuration: '100ms',
+          data: {title: book.title, author: book.author, synopsis: book.synopsis, image: book.image, price: book.price}
+      //data: {name: this.name, animal: this.animal},
+    });
 
-  teste() {
-    console.log(this.books)
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      //this.animal = result;
+    });
   }
 
   //Function to display modal (dialog) that displays the synopsis
   openSynopsis(book: { synopsis: any; }): void {
-    const dialogRef = this.dialog.open(DialogsComponent,
+    const dialogRef = this.dialog.open(DialogSynopsisComponent,
         {
       width: '550px',
       enterAnimationDuration:'500ms',
