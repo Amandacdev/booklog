@@ -1,7 +1,19 @@
 export class Book {
 
-  constructor(private _title: string, private _author: string, private _synopsis: string,
-              private _image: string, private _price: number) {
+  constructor( private _id: number,
+               private _title: string,
+              private _author: string,
+              private _synopsis: string,
+              private _image: string,
+              private _price: number) {
+  }
+
+  get id(): number {
+    return this._id;
+  }
+
+  set id(newId: number) {
+    this._id = newId;
   }
 
   get title(): string {
@@ -43,4 +55,5 @@ export class Book {
   set price(newPrice: number) {
     this._price = newPrice;
   }
+
 }

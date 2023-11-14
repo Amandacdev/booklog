@@ -14,7 +14,7 @@ export class BookRegisterComponent implements OnInit {
   // editorMode = false;
 
   constructor(private bookService: BookService) {
-    this.book = new Book('','','', '', 0);
+    this.book = new Book(1,'','','', '', 0);
     this.booksAmount = 0;
   }
 
@@ -25,6 +25,6 @@ export class BookRegisterComponent implements OnInit {
   insertBook(): void {
     this.bookService.inserir(this.book).subscribe(book => console.log(book));
     this.bookService.listar().subscribe(books => this.booksAmount = books.length);
-    this.book = new Book('','','', '', 0);
+    this.book = new Book(1,'','','', '', 0);
   }
 }

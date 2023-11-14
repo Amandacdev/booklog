@@ -22,8 +22,8 @@ export class BookService {
     return this.httpClient.post<Book>(this.urlBooks, book);
   }
 
-  deletar(book: Book) {
-    // A implementar
+  remove(id: number): Observable<object> {
+    return this.httpClient.delete(`${this.urlBooks}/${id}`);
   }
 
   atualizar(book: Book) {

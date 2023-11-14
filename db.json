@@ -1,14 +1,6 @@
 {
   "books": [
     {
-      "id": 1,
-      "title": "Harry Potter",
-      "author": "J. K. Rowling",
-      "synopsis": "Harry Potter é um garoto órfão que vive infeliz com seus tios, os Dursleys. Ele recebe uma carta contendo um convite para ingressar em Hogwarts, uma famosa escola especializada em formar jovens bruxos. Inicialmente, Harry é impedido de ler a carta por seu tio, mas logo recebe a visita de Hagrid, o guarda-caça de Hogwarts, que chega para levá-lo até a escola. Harry adentra um mundo mágico que jamais imaginara, vivendo diversas aventuras com seus novos amigos, Rony Weasley e Hermione Granger.",
-      "image": "https://m.media-amazon.com/images/I/710ESoXqVPL._SL1200_.jpg",
-      "price": 40.5
-    },
-    {
       "id": 2,
       "title": "A Revolução dos Bichos",
       "author": "George Orwell",
@@ -63,14 +55,6 @@
       "synopsis": "Em uma manhã de primavera, a garotinha Fern resgata um porquinho e o nomeia Wilbur. Vendido para o tio de Fern e mandado para a fazenda dele, o porquinho faz amizade com os animais de lá ― incluindo a gentil aranha Charlotte. Mas, quando Wilbur precisa enfrentar o cruel destino de sua espécie, Fern e Charlotte se juntam aos outros animais para bolarem um plano infalível e salvarem esse porquinho muito especial.",
       "image": "https://m.media-amazon.com/images/I/91RdYbmF5PL._SL1500_.jpg",
       "price": 33.1
-    },
-    {
-      "_title": "",
-      "_author": "",
-      "_synopsis": "",
-      "_image": "",
-      "_price": 0,
-      "id": 9
     }
   ]
 }

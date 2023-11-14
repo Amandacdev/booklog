@@ -41,9 +41,18 @@ export class BookListComponent implements OnInit {
     this.bookService.listar().subscribe(books => this.books = books);
   }
 
-  deletar(book: Book): void {
-    // A implementar
+  remove(book: Book): void {
+      this.bookService.remove(book.id).subscribe(
+          resposta => {
+              const indxBookRemove = this.books.findIndex(b => b.title === book.title);
+              if(indxBookRemove > -1){
+                  this.books.slice(indxBookRemove,1);
+              }
+          }
+      );
   }
+
+
 
   //Function to display modal (dialog) that edit book's info
   openEditDialog(book: {title: string, author: string, synopsis: string, image: string, price: number}): void {
@@ -76,34 +85,5 @@ export class BookListComponent implements OnInit {
       console.log('The dialog was closed');
     });
   }
-
-  // books: Book[] = BOOKS;
-  // book: Book = new Book("", "", "", '', 0);
-  // editorMode = false;
-  //
-  // renameTitle: string = '';
-  // renameAuthor: string = '';
-  // renameSynopsis: string = '';
-  //
-  // deleteBook(bookToDelete: Book): void {
-  //   const indxBookToDelete: number = this.books.findIndex(Book => Book.title === bookToDelete.title);
-  //
-  //   if (indxBookToDelete >= 0) {
-  //     this.books.splice(indxBookToDelete, 1);
-  //   }
-  // }
-  //
-  // editBook(bookToEdit: Book) {
-  //   const indxBookToEddit: number = this.books.findIndex(Book => Book.title === bookToEdit.title);
-  //
-  //   if (indxBookToEddit >= 0) {
-  //     this.books[indxBookToEddit].title = this.renameTitle;
-  //     this.books[indxBookToEddit].author = this.renameAuthor;
-  //     this.books[indxBookToEddit].synopsis = this.renameSynopsis;
-  //   }
-  //
-  // }
-
-
 }
 
