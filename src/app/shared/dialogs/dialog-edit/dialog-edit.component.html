@@ -1,0 +1,36 @@
+<h1 mat-dialog-title style="text-align: center">Edição - {{data.title}}</h1>
+
+<div mat-dialog-content >
+    <p>Atualize abaixo as informações necessárias:</p>
+    <div fxLayout="column" fxLayoutAlign="space-around stretch" >
+        <mat-form-field>
+            <mat-label>Título</mat-label>
+            <input matInput [(ngModel)]="data.title">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Autor</mat-label>
+            <input matInput [(ngModel)]="data.author">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Preço</mat-label>
+            <input matInput [(ngModel)]="data.price">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Imagem</mat-label>
+            <input matInput [(ngModel)]="data.image">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Sinopse</mat-label>
+            <textarea rows = "8" matInput [(ngModel)]="data.synopsis"></textarea>
+        </mat-form-field>
+    </div>
+</div>
+<div mat-dialog-actions style="justify-content: center">
+    <button mat-raised-button color="warn" (click)="closeDialog()">Cancelar</button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="data.title" >Salvar Alterações</button>
+</div>
+
