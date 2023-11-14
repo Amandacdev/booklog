@@ -1,4 +1,4 @@
-<div fxLayout="row wrap" fxLayoutAlign="space-evenly center">
+<div fxLayout="row wrap" fxLayoutAlign="center center">
   <mat-card class="book-card" *ngFor="let book of books">
     <img mat-card-image class="book-img" src="{{book.image}}" alt="book cover">
 
@@ -12,10 +12,10 @@
 
       <mat-card-actions fxLayout="row" fxLayoutAlign="center end">
 
-        <!--Button temporário aqui, essa ação deve ser feita por um button do menu-->
+        <!--Button temporário aqui, essa ação deve ser feita por um button do menu
         <button mat-raised-button  (click)="changeDisplayOfButtons()">
           {{ changeButtonText }}
-        </button>
+        </button>-->
 
         <button mat-raised-button color="basic" (click)="openSynopsis(this.book)"  *ngIf="showButtons1">
           <mat-icon>class</mat-icon>
