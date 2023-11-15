@@ -8,17 +8,18 @@
   align-items: center;
   border-radius: 20px;
   box-shadow: 0 0 20px #4b4646;
-  /*color: whitesmoke;*/
   font-size: 18px;
-  width:85%;
   padding: 40px;
-  margin:20px;
-}
-/*
-.register-book-subtitle{
-  color: whitesmoke;
+  margin: 2% 20% 2% 20%;
 }
 
+
+.register-book-subtitle{
+  font-family: 'Merriweather', serif;
+  font-size: 28px;
+}
+
+/*
 .book-register{
   padding: 40px;
 }
