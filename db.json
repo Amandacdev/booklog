@@ -64,6 +64,15 @@
       "_image": "",
       "_price": 0,
       "id": 9
+    },
+    {
+      "_id": 1,
+      "_title": "eufiz",
+      "_author": "eumesmo",
+      "_synopsis": "eu",
+      "_image": "",
+      "_price": "50",
+      "id": 10
     }
   ]
 }
