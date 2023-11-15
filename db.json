@@ -57,31 +57,44 @@
       "price": 33.1
     },
     {
-      "_id": 1,
-      "_title": "",
-      "_author": "",
-      "_synopsis": "",
-      "_image": "",
-      "_price": 0,
-      "id": 9
+      "id": 9,
+      "title": "Corte de espinhos e rosas 1",
+      "author": "Sarah J. Maas",
+      "synopsis": "Ela roubou uma vida. Agora deve pagar com o coração. Em Corte de espinhos e rosas, livro que da início a uma das séries mais queridas pelo público, acompanhe as aventuras de Feyre pelo perigoso e deslumbrante mundo das fadas.",
+      "image": "https://m.media-amazon.com/images/I/91frS6qRfbL._SL1500_.jpg",
+      "price": 46.2
     },
     {
-      "_id": 1,
-      "_title": "eufiz",
-      "_author": "eumesmo",
-      "_synopsis": "eu",
-      "_image": "",
-      "_price": "50",
-      "id": 10
+      "id": 10,
+      "title": "O Oceano no Fim Do Caminho",
+      "author": "Neil Gaiman",
+      "synopsis": "Foi há quarenta anos, agora ele lembra muito bem. Quando os tempos ficaram difíceis e os pais decidiram que o quarto do alto da escada, que antes era dele, passaria a receber hóspedes. Ele só tinha sete anos.",
+      "image": "https://m.media-amazon.com/images/I/710tshetuTL._SL1000_.jpg",
+      "price": 35.1
     },
     {
-      "_id": 1,
-      "_title": "",
-      "_author": "",
-      "_synopsis": "",
-      "_image": "",
-      "_price": 0,
-      "id": 11
+      "id": 11,
+      "title": "Daisy Jones and The Six",
+      "author": "Taylor Jenkins Reid",
+      "synopsis": "Embalado pelo melhor do rock'n'roll, um romance inesquecível sobre uma banda dos anos 1970, sua apaixonante vocalista e o amor à música. Da autora de Em outra vida, talvez?",
+      "image": "https://m.media-amazon.com/images/I/91ob37hsqNL._SL1500_.jpg",
+      "price": 57.5
+    },
+    {
+      "id": 12,
+      "title": "O Jardim Secreto",
+      "author": "Frances Hodgson Burnett",
+      "synopsis": "As histórias mais mágicas são capazes de atravessar as barreiras do tempo e encantar leitores de diferentes gerações. Em 1911, Frances Hodgson Burnett presenteou o mundo com O Jardim Secreto, uma história doce e delicada sobre o poder transformador da magia, da natureza e da amizade.",
+      "image": "https://m.media-amazon.com/images/I/61EERnVHUFL._SL1000_.jpg",
+      "price": 55.1
+    },
+    {
+      "id": 13,
+      "title": "Alice No País Das Maravilhas",
+      "author": "Lewis Carroll",
+      "synopsis": "Uma menina, um coelho e uma história capazes de fazer qualquer um de nós voltar a sonhar. Alice é despertada de um leve sono ao pé de uma árvore por um coelho peculiar. Uma criatura alva e falante com roupas engraçadas, que consulta seu relógio e reclama do próprio atraso.",
+      "image": "https://m.media-amazon.com/images/I/91rtArfzScL._SL1500_.jpg",
+      "price": 62.8
     }
   ]
 }

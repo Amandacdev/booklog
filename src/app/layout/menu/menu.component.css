@@ -1,8 +1,17 @@
 .menu-container {
-    background-color: #0b121b;
+    background-color: #0190a2;
     color: white;
     border-top-left-radius: 2rem;
     margin-bottom: 30px;
-    padding:12px;
+    padding:10px 40px 10px 40px;
+    font-size: 35px;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Merriweather', serif;
 }
-
+.text-welcome{
+    line-height: 1.5;
+    font-size: 14px;
+    font-family: Roboto, sans-serif;
+    text-align: center;
+}

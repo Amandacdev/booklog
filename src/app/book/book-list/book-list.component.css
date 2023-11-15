@@ -1,6 +1,7 @@
 .book-card {
   border-radius: 20px;
   background-color: rgba(217, 213, 217, 0.84);
+  box-shadow: 0 0 20px #4b4646;
   font-size: 18px;
   margin:10px;
   padding-top: 40px;

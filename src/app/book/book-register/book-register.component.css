@@ -1,19 +1,20 @@
 *{
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: inline;
 }
 
 .register-book{
   justify-content: center;
   align-items: center;
   border-radius: 20px;
-  background-color: rgba(10, 1, 9, 0.84);
-  color: whitesmoke;
+  box-shadow: 0 0 20px #4b4646;
+  /*color: whitesmoke;*/
   font-size: 18px;
   width:85%;
   padding: 40px;
   margin:20px;
 }
-
+/*
 .register-book-subtitle{
   color: whitesmoke;
 }
@@ -26,3 +27,6 @@
   width: 300px;
   align-content: center;
 }
+
+*/
+
