@@ -4,33 +4,27 @@ import {BookService} from "../../services/book.service";
 import {Book} from "../../model/book";
 
 @Component({
-  selector: 'app-dialog-edit',
-  templateUrl: './dialog-edit.component.html',
-  styleUrls: ['./dialog-edit.component.css']
+    selector: 'app-dialog-edit',
+    templateUrl: './dialog-edit.component.html',
+    styleUrls: ['./dialog-edit.component.css']
 })
 export class DialogEditComponent {
-  constructor(
-      public dialogRef: MatDialogRef<DialogEditComponent>,
-      private bookService: BookService,
-      @Inject(MAT_DIALOG_DATA) public data: {book: Book}
-  ) {
-  }
-  closeDialog(): void {
-    this.dialogRef.close();
-  }
+    public originalTitle: string;
 
-  edit(book: Book) {
-    this.bookService.atualizar(book).subscribe(
-        updatedBook => {
-            console.log(updatedBook);
-            book.title = updatedBook.title;
-            book.image = updatedBook.image;
-            book.author = updatedBook.author;
-            book.synopsis = updatedBook.synopsis;
-            book.price = updatedBook.price;
-        }
-    );
-    this.closeDialog();
-  }
+    constructor(
+        public dialogRef: MatDialogRef<DialogEditComponent>,
+        private bookService: BookService,
+        @Inject(MAT_DIALOG_DATA) public data: {book: Book}
+    ) {
+        this.originalTitle = data.book.title;
+    }
+    closeDialog(updatedBook?: Book): void {
+        this.dialogRef.close(updatedBook);
+    }
 
+    edit(book: Book) {
+        book.price = Number(book.price);
+        this.bookService.atualizar(book).subscribe();
+        this.closeDialog(book);
+    }
 }

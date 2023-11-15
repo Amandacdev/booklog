@@ -1,6 +1,14 @@
 {
   "books": [
     {
+      "id": 1,
+      "title": "Harry Potter",
+      "author": "J. K. Rowling",
+      "synopsis": "Harry Potter é um garoto órfão que vive infeliz com seus tios, os Dursleys. Ele recebe uma carta contendo um convite para ingressar em Hogwarts, uma famosa escola especializada em formar jovens bruxos. Inicialmente, Harry é impedido de ler a carta por seu tio, mas logo recebe a visita de Hagrid, o guarda-caça de Hogwarts, que chega para levá-lo até a escola. Harry adentra um mundo mágico que jamais imaginara, vivendo diversas aventuras com seus novos amigos, Rony Weasley e Hermione Granger.",
+      "image": "https://m.media-amazon.com/images/I/710ESoXqVPL._SL1200_.jpg",
+      "price": 40.5
+    },
+    {
       "id": 2,
       "title": "A Revolução dos Bichos",
       "author": "George Orwell",
@@ -95,6 +103,14 @@
       "synopsis": "Uma menina, um coelho e uma história capazes de fazer qualquer um de nós voltar a sonhar. Alice é despertada de um leve sono ao pé de uma árvore por um coelho peculiar. Uma criatura alva e falante com roupas engraçadas, que consulta seu relógio e reclama do próprio atraso.",
       "image": "https://m.media-amazon.com/images/I/91rtArfzScL._SL1500_.jpg",
       "price": 62.8
+    },
+    {
+      "id": 14,
+      "title": "Testes de Edição",
+      "author": "IanRibeiroDev",
+      "synopsis": "Naaaaaaaaaaaaao. Nao edite o preço e destrua meu plano diabólico de ficar riiiicoooo. NAAAAAAAAAAOOOOOOOO ;(",
+      "image": "https://th.bing.com/th/id/OIG.907b97h.qhKZKVc2IGMw?pid=ImgGn&w=1024&h=1024&rs=1",
+      "price": 1e+32
     }
   ]
 }

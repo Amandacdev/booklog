@@ -1,31 +1,31 @@
-<h1 mat-dialog-title style="text-align: center">Edição - {{data.book.title}}</h1>
+<h1 mat-dialog-title style="text-align: center">Edição - {{originalTitle}}</h1>
 
 <div mat-dialog-content >
     <p>Atualize abaixo as informações necessárias:</p>
     <div fxLayout="column" fxLayoutAlign="space-around stretch" >
         <mat-form-field>
             <mat-label>Título</mat-label>
-            <input matInput [value]="data.book.title">
+            <input matInput [(ngModel)]="data.book.title">
         </mat-form-field>
 
         <mat-form-field>
             <mat-label>Autor</mat-label>
-            <input matInput [value]="data.book.author">
+            <input matInput [(ngModel)]="data.book.author">
         </mat-form-field>
 
         <mat-form-field>
             <mat-label>Preço</mat-label>
-            <input matInput [value]="data.book.price | number:'1.2-2'">
+            <input matInput [(ngModel)]="data.book.price">
         </mat-form-field>
 
         <mat-form-field>
             <mat-label>Imagem</mat-label>
-            <input matInput [value]="data.book.image">
+            <input matInput [(ngModel)]="data.book.image">
         </mat-form-field>
 
         <mat-form-field>
             <mat-label>Sinopse</mat-label>
-            <textarea rows = "8" matInput [value]="data.book.synopsis"></textarea>
+            <textarea rows = "8" matInput [(ngModel)]="data.book.synopsis"></textarea>
         </mat-form-field>
     </div>
 </div>

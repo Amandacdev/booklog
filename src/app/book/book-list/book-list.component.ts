@@ -58,16 +58,23 @@ ngOnInit() {
 
   //Function to display modal (dialog) that edit book's info
   openEditDialog(book: Book): void {
+    const copy = {...book};
     const dialogRef = this.dialog.open(DialogEditComponent,
         {
           width: '950px',
           enterAnimationDuration:'500ms',
           exitAnimationDuration: '100ms',
-          data: {book: book}
+          data: {book: copy}
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+        if(result instanceof Object) {
+            book.title = result.title;
+            book.author = result.author;
+            book.synopsis = result.synopsis;
+            book.price = result.price;
+            book.image = result.image;
+        }
     });
   }
 
