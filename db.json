@@ -73,6 +73,15 @@
       "_image": "",
       "_price": "50",
       "id": 10
+    },
+    {
+      "_id": 1,
+      "_title": "",
+      "_author": "",
+      "_synopsis": "",
+      "_image": "",
+      "_price": 0,
+      "id": 11
     }
   ]
 }
