@@ -17,7 +17,7 @@
           {{ changeButtonText }}
         </button>
 
-        <button mat-raised-button color="basic" (click)="openSynopsis(this.book)"  *ngIf="showButtons1">
+        <button mat-raised-button color="basic" (click)="openSynopsis(book)"  *ngIf="showButtons1">
           <mat-icon>class</mat-icon>
           Sinopse
         </button>
@@ -28,7 +28,7 @@
         </button>
 
 
-        <button mat-raised-button color="primary" (click)="openEditDialog(this.book)" *ngIf="showButtons2">
+        <button mat-raised-button color="primary" (click)="openEditDialog(book)" *ngIf="showButtons2">
           <mat-icon>edit</mat-icon>
           Editar
         </button>

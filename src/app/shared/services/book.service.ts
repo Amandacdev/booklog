@@ -22,11 +22,19 @@ export class BookService {
     return this.httpClient.post<Book>(this.urlBooks, book);
   }
 
-  remove(id: number): Observable<object> {
-    return this.httpClient.delete(`${this.urlBooks}/${id}`);
+  remove(book: Book): Observable<any> {
+    return this.httpClient.delete(`${this.urlBooks}/${book.id}`);
   }
 
-  atualizar(book: Book) {
-    // A implementar
+  atualizar(book: Book): Observable<Book> {
+    return this.httpClient.put<Book>(`${this.urlBooks}/${book.id}`, book);
+  }
+
+  pesquisarPorId(id: string): Observable<Book> {
+    return this.httpClient.get<Book>(`${this.urlBooks}/${id}`);
+  }
+
+  pesquisarPorAutor(author: string): Observable<Book[]> {
+    return this.httpClient.get<Book[]>(`${this.urlBooks}?author=${author}`);
   }
 }

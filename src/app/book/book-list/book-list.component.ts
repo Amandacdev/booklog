@@ -24,6 +24,10 @@ export class BookListComponent implements OnInit {
     this.books = [];
   }
 
+ngOnInit() {
+    this.bookService.listar().subscribe(books => this.books = books);
+}
+
   //Function to change button views - 'Administrador' or 'Cliente'
   changeDisplayOfButtons() {
     if (this.changeButtonText === 'Mudar para Modo Adm') {
@@ -37,16 +41,14 @@ export class BookListComponent implements OnInit {
     }
   }
 
-  ngOnInit() {
-    this.bookService.listar().subscribe(books => this.books = books);
-  }
+
 
   remove(book: Book): void {
-      this.bookService.remove(book.id).subscribe(
+      this.bookService.remove(book).subscribe(
           resposta => {
-              const indxBookRemove = this.books.findIndex(b => b.title === book.title);
+              const indxBookRemove = this.books.findIndex(b => b.id === book.id);
               if(indxBookRemove > -1){
-                  this.books.slice(indxBookRemove,1);
+                  this.books.splice(indxBookRemove,1);
               }
           }
       );
@@ -55,19 +57,17 @@ export class BookListComponent implements OnInit {
 
 
   //Function to display modal (dialog) that edit book's info
-  openEditDialog(book: {title: string, author: string, synopsis: string, image: string, price: number}): void {
+  openEditDialog(book: Book): void {
     const dialogRef = this.dialog.open(DialogEditComponent,
         {
           width: '950px',
           enterAnimationDuration:'500ms',
           exitAnimationDuration: '100ms',
-          data: {title: book.title, author: book.author, synopsis: book.synopsis, image: book.image, price: book.price}
-      //data: {name: this.name, animal: this.animal},
+          data: {book: book}
     });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
-      //this.animal = result;
     });
   }
 
