@@ -13,6 +13,9 @@
   margin: 2% 20% 2% 20%;
 }
 
+mat-form-field{
+  width: 80%;
+}
 .register-book-subtitle{
   font-family: 'Merriweather', serif;
   font-size: 28px;
