@@ -11,7 +11,7 @@ import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 export class DialogSynopsisComponent {
   constructor(
       public dialogRef: MatDialogRef<DialogSynopsisComponent>,
-      @Inject(MAT_DIALOG_DATA) public data: {synopsis: any}
+      @Inject(MAT_DIALOG_DATA) public data: {text: string}
   ) { }
 
   closeDialog(): void {
