@@ -4,13 +4,13 @@ import {MatDialogRef} from "@angular/material/dialog";
 import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-dialog-synopsis',
-  templateUrl: './dialog-synopsis.component.html',
-  styleUrls: ['./dialog-synopsis.component.css']
+  selector: 'app-dialog-info',
+  templateUrl: './dialog-info.component.html',
+  styleUrls: ['./dialog-info.component.css']
 })
-export class DialogSynopsisComponent {
+export class DialogInfoComponent {
   constructor(
-      public dialogRef: MatDialogRef<DialogSynopsisComponent>,
+      public dialogRef: MatDialogRef<DialogInfoComponent>,
       @Inject(MAT_DIALOG_DATA) public data: { text: string;
                             title: string}
   ) { }

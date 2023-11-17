@@ -20,14 +20,14 @@ import {MatMenuModule} from "@angular/material/menu";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {HttpClientModule} from "@angular/common/http";
 import {MatDialogModule} from '@angular/material/dialog';
-import { DialogSynopsisComponent } from './shared/dialogs/dialog-synopsis/dialog-synopsis.component';
+import { DialogInfoComponent } from './shared/dialogs/dialog-info/dialog-info.component';
 import { DialogEditComponent } from './shared/dialogs/dialog-edit/dialog-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    DialogSynopsisComponent,
+    DialogInfoComponent,
     DialogEditComponent
   ],
     imports: [

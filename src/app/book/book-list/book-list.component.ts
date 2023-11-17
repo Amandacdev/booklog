@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Book} from "../../shared/model/book";
 import {BookService} from "../../shared/services/book.service";
 import {MatDialog} from "@angular/material/dialog";
-import {DialogSynopsisComponent} from "../../shared/dialogs/dialog-synopsis/dialog-synopsis.component";
+import {DialogInfoComponent} from "../../shared/dialogs/dialog-info/dialog-info.component";
 import {DialogEditComponent} from "../../shared/dialogs/dialog-edit/dialog-edit.component";
 
 
@@ -76,7 +76,7 @@ ngOnInit() {
 
   //Function to display modal (dialog) that displays the synopsis
   openSynopsis(book: { synopsis: String; }): void {
-    const dialogRef = this.dialog.open(DialogSynopsisComponent,
+    const dialogRef = this.dialog.open(DialogInfoComponent,
         {
       width: '550px',
       enterAnimationDuration:'500ms',
