@@ -41,8 +41,6 @@ ngOnInit() {
     }
   }
 
-
-
   remove(book: Book): void {
       this.bookService.remove(book).subscribe(
           resposta => {
@@ -53,8 +51,6 @@ ngOnInit() {
           }
       );
   }
-
-
 
   //Function to display modal (dialog) that edit book's info
   openEditDialog(book: Book): void {
@@ -79,16 +75,16 @@ ngOnInit() {
   }
 
   //Function to display modal (dialog) that displays the synopsis
-  openSynopsis(book: { synopsis: any; }): void {
+  openSynopsis(book: { synopsis: String; }): void {
     const dialogRef = this.dialog.open(DialogSynopsisComponent,
         {
       width: '550px',
       enterAnimationDuration:'500ms',
       exitAnimationDuration: '100ms',
-      data: {synopsis: book.synopsis}
+      data: {title: 'Sinopse', text: book.synopsis}
     });
 
-    dialogRef.afterClosed().subscribe(result => {
+      dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
     });
   }

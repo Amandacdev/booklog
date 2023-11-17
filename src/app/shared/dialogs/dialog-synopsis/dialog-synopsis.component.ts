@@ -11,10 +11,11 @@ import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 export class DialogSynopsisComponent {
   constructor(
       public dialogRef: MatDialogRef<DialogSynopsisComponent>,
-      @Inject(MAT_DIALOG_DATA) public data: {text: string}
+      @Inject(MAT_DIALOG_DATA) public data: { text: string;
+                            title: string}
   ) { }
 
-  closeDialog(): void {
+closeDialog(): void {
     this.dialogRef.close();
   }
 }

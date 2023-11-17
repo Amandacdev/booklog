@@ -15,7 +15,7 @@ export class BookRegisterComponent implements OnInit {
   booksAmount: number;
   // editorMode = false;
 
-  constructor(private bookService: BookService, , public dialog: MatDialog) {
+  constructor(private bookService: BookService, public dialog: MatDialog) {
     this.book = new Book('','','','', '', 0);
     this.booksAmount = 0;
   }
@@ -28,19 +28,17 @@ export class BookRegisterComponent implements OnInit {
     this.bookService.inserir(this.book).subscribe(book => console.log(book));
     this.bookService.listar().subscribe(books => this.booksAmount = books.length);
 
+    this.book = new Book('','','','', '', 0);
+
     const dialogRef = this.dialog.open(DialogSynopsisComponent,
         {
           width: '550px',
           enterAnimationDuration:'500ms',
           exitAnimationDuration: '100ms',
-          data: {text: "Cadastrado com sucesso!"}
+          data: {title: 'Livro cadastrado com sucesso!',
+                text: ""}
         });
 
     dialogRef.afterClosed().subscribe();
-
-    window.alert("Livro Registrado");
-  }
-    
-    this.book = new Book('','','','', '', 0);
   }
 }
