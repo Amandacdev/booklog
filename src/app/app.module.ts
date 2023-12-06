@@ -22,6 +22,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {MatDialogModule} from '@angular/material/dialog';
 import { DialogInfoComponent } from './shared/dialogs/dialog-info/dialog-info.component';
 import { DialogEditComponent } from './shared/dialogs/dialog-edit/dialog-edit.component';
+import {FirestoreModule} from "./shared/firestore/firestore.module";
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { DialogEditComponent } from './shared/dialogs/dialog-edit/dialog-edit.co
         MatMenuModule,
         FlexLayoutModule,
         HttpClientModule,
-        MatDialogModule
+        MatDialogModule,
+        FirestoreModule
     ],
   providers: [],
   bootstrap: [AppComponent]

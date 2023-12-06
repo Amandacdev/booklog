@@ -2,6 +2,7 @@ import {Component, Inject} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 import {BookService} from "../../services/book.service";
 import {Book} from "../../model/book";
+import {BookFirestoreService} from "../../services/book-firestore.service";
 
 @Component({
     selector: 'app-dialog-edit',
@@ -13,10 +14,10 @@ export class DialogEditComponent {
 
     constructor(
         public dialogRef: MatDialogRef<DialogEditComponent>,
-        private bookService: BookService,
+        private bookService: BookFirestoreService,
         @Inject(MAT_DIALOG_DATA) public data: {book: Book}
     ) {
-        this.originalTitle = data.book.title;
+        this.originalTitle = data.book.title || '';
     }
     closeDialog(updatedBook?: Book): void {
         this.dialogRef.close(updatedBook);

@@ -4,6 +4,7 @@ import {BookService} from "../../shared/services/book.service";
 import {MatDialog} from "@angular/material/dialog";
 import {DialogInfoComponent} from "../../shared/dialogs/dialog-info/dialog-info.component";
 import {DialogEditComponent} from "../../shared/dialogs/dialog-edit/dialog-edit.component";
+import {BookFirestoreService} from "../../shared/services/book-firestore.service";
 
 
 @Component({
@@ -20,7 +21,7 @@ export class BookListComponent implements OnInit {
   showButtons2 = false;   //buttons for administrator: 'Editar' or 'Remover'
   changeButtonText = 'Mudar para Modo Adm';
 
-  constructor(private bookService: BookService, public dialog: MatDialog) {
+  constructor(private bookService: BookFirestoreService, public dialog: MatDialog) {
     this.books = [];
   }
 
