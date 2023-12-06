@@ -3,7 +3,6 @@ import {from, Observable} from 'rxjs';
 import {Book} from '../model/book';
 import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/compat/firestore';
 import {map} from 'rxjs/operators';
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js'
 
 
 @Injectable({
