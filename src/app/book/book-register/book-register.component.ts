@@ -4,6 +4,8 @@ import {BookService} from "../../shared/services/book.service";
 import {DialogInfoComponent} from "../../shared/dialogs/dialog-info/dialog-info.component";
 import {MatDialog} from "@angular/material/dialog";
 import {BookFirestoreService} from "../../shared/services/book-firestore.service";
+import {MatSnackBar} from "@angular/material/snack-bar";
+import {MensagemService} from "../../shared/services/mensagem.service";
 
 @Component({
   selector: 'app-book-register',
@@ -15,7 +17,7 @@ export class BookRegisterComponent implements OnInit {
   book: Book;
   booksAmount: number;
 
-  constructor(private bookService: BookFirestoreService, public dialog: MatDialog) {
+  constructor(private bookService: BookFirestoreService, private mensagemServise: MensagemService) {
       this.book = new Book('', {
           title: '',
           author: '',
@@ -32,17 +34,21 @@ export class BookRegisterComponent implements OnInit {
   }
 
   insertBook(): void {
-    this.bookService.inserir(this.book).subscribe(book => console.log(book));
+    this.bookService.inserir(this.book).subscribe(book => {
+        this.mensagemServise.success(`Livro cadastrado com sucesso!`);
+    });
+
     this.bookService.listar().subscribe(books => this.booksAmount = books.length);
 
-      this.book = new Book('', {
-          title: '',
-          author: '',
-          synopsis: '',
-          image: '',
-          price: 0
-      });
+    this.book = new Book('', {
+      title: '',
+      author: '',
+      synopsis: '',
+      image: '',
+      price: 0
+    });
 
+      /*
     const dialogRef = this.dialog.open(DialogInfoComponent,
         {
           width: '550px',
@@ -53,5 +59,7 @@ export class BookRegisterComponent implements OnInit {
         });
 
     dialogRef.afterClosed().subscribe();
+     */
   }
+
 }

@@ -5,6 +5,7 @@ import {MatDialog} from "@angular/material/dialog";
 import {DialogInfoComponent} from "../../shared/dialogs/dialog-info/dialog-info.component";
 import {DialogEditComponent} from "../../shared/dialogs/dialog-edit/dialog-edit.component";
 import {BookFirestoreService} from "../../shared/services/book-firestore.service";
+import {MensagemService} from "../../shared/services/mensagem.service";
 
 
 @Component({
@@ -21,7 +22,7 @@ export class BookListComponent implements OnInit {
   showButtons2 = false;   //buttons for administrator: 'Editar' or 'Remover'
   changeButtonText = 'Mudar para Modo Adm';
 
-  constructor(private bookService: BookFirestoreService, public dialog: MatDialog) {
+  constructor(private bookService: BookFirestoreService, public dialog: MatDialog, private mensagemServise: MensagemService) {
     this.books = [];
   }
 
@@ -51,11 +52,14 @@ ngOnInit() {
               }
           }
       );
+      this.mensagemServise.success(`Livro removido com sucesso!`);
   }
 
   //Function to display modal (dialog) that edit book's info
   openEditDialog(book: Book): void {
     const copy = {...book};
+
+
     const dialogRef = this.dialog.open(DialogEditComponent,
         {
           width: '950px',
@@ -63,6 +67,8 @@ ngOnInit() {
           exitAnimationDuration: '100ms',
           data: {book: copy}
     });
+
+
 
     dialogRef.afterClosed().subscribe(result => {
         if(result instanceof Object) {
@@ -72,6 +78,7 @@ ngOnInit() {
             book.price = result.price;
             book.image = result.image;
         }
+        this.mensagemServise.success(`Livro ${book.title} atualizado com sucesso!`);
     });
   }
 

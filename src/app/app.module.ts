@@ -23,6 +23,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { DialogInfoComponent } from './shared/dialogs/dialog-info/dialog-info.component';
 import { DialogEditComponent } from './shared/dialogs/dialog-edit/dialog-edit.component';
 import {FirestoreModule} from "./shared/firestore/firestore.module";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import {FirestoreModule} from "./shared/firestore/firestore.module";
         FlexLayoutModule,
         HttpClientModule,
         MatDialogModule,
-        FirestoreModule
+        FirestoreModule,
+        MatSnackBarModule
     ],
   providers: [],
   bootstrap: [AppComponent]

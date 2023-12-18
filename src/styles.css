@@ -1,5 +1,13 @@
 html, body { height: 100%; margin: 0;}
 
+
+
+snack-bar-container.success {
+    background-color: green;
+}
+
+
+
 /*CSS PARA BACKGROUND DE ESTRELAS*/
 
 @keyframes move-twink-back {
