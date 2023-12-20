@@ -13,10 +13,9 @@ export class MensagemService {
     this.abrirSnackBar(mensagem, ['success']);
   }
 
-
   error(mensagem:string): void {
-    this.abrirSnackBar(mensagem, ['error']);
-  }
+        this.abrirSnackBar(mensagem, ['error']);
+    }
 
  alert(mensagem:string): void {
     this.abrirSnackBar(mensagem, ['alert']);

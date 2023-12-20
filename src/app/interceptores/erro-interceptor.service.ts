@@ -20,9 +20,10 @@ export class ErroInterceptor implements HttpInterceptor {
         );
     }
     trataRespostaErro(resposta: object): Observable<HttpEvent<any>>{
+
         if(resposta instanceof HttpErrorResponse){
             this.mensagemService.error('Erro: ' + resposta.message);
         }
-        return throwError(resposta.message);
+        return throwError(resposta);
     }
 }
