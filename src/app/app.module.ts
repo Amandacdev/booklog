@@ -25,6 +25,8 @@ import { DialogEditComponent } from './shared/dialogs/dialog-edit/dialog-edit.co
 import {FirestoreModule} from "./shared/firestore/firestore.module";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 
+import {InterceptoresModule} from "./interceptores/interceptores.module";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +53,8 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
         HttpClientModule,
         MatDialogModule,
         FirestoreModule,
-        MatSnackBarModule
+        MatSnackBarModule,
+        InterceptoresModule
     ],
   providers: [],
   bootstrap: [AppComponent]

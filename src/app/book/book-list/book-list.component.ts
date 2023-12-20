@@ -52,7 +52,7 @@ ngOnInit() {
               }
           }
       );
-      this.mensagemServise.success(`Livro removido com sucesso!`);
+      this.mensagemServise.success(`Livro ${book.title} removido com sucesso!`);
   }
 
   //Function to display modal (dialog) that edit book's info
@@ -93,7 +93,6 @@ ngOnInit() {
     });
 
       dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
     });
   }
 }

@@ -34,8 +34,9 @@ export class BookRegisterComponent implements OnInit {
   }
 
   insertBook(): void {
+    var titulo = this.book.title;
     this.bookService.inserir(this.book).subscribe(book => {
-        this.mensagemServise.success(`Livro cadastrado com sucesso!`);
+        this.mensagemServise.success(`Livro ${titulo} cadastrado com sucesso!`);
     });
 
     this.bookService.listar().subscribe(books => this.booksAmount = books.length);
