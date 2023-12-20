@@ -11,7 +11,7 @@ export class BookService {
   urlBooks: string;
 
   constructor(private httpClient: HttpClient) {
-    this.urlBooks = "http://localhost:3000/books";
+    this.urlBooks = "http://localhost:8080/books";
   }
 
   listar(): Observable<Array<Book>> {

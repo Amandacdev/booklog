@@ -17,7 +17,7 @@ export class BookRegisterComponent implements OnInit {
   book: Book;
   booksAmount: number;
 
-  constructor(private bookService: BookFirestoreService, private mensagemServise: MensagemService) {
+  constructor(private bookService: BookService, private mensagemServise: MensagemService) {
       this.book = new Book('', {
           title: '',
           author: '',

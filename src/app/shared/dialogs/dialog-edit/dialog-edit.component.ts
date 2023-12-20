@@ -14,7 +14,7 @@ export class DialogEditComponent {
 
     constructor(
         public dialogRef: MatDialogRef<DialogEditComponent>,
-        private bookService: BookFirestoreService,
+        private bookService: BookService,
         @Inject(MAT_DIALOG_DATA) public data: {book: Book}
     ) {
         this.originalTitle = data.book.title || '';
