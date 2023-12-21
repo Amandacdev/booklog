@@ -22,7 +22,7 @@ export class BookListComponent implements OnInit {
   showButtons2 = false;   //buttons for administrator: 'Editar' or 'Remover'
   changeButtonText = 'Mudar para Modo Adm';
 
-  constructor(private bookService: BookService, public dialog: MatDialog, private mensagemServise: MensagemService) {
+  constructor(private bookService: BookFirestoreService, public dialog: MatDialog, private mensagemServise: MensagemService) {
     this.books = [];
   }
 
