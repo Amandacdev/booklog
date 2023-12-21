@@ -24,8 +24,8 @@ export class DialogEditComponent {
     }
 
     edit(book: Book) {
-        book.price = Number(book.price);
         this.bookService.atualizar(book).subscribe();
+        book.price = Number(book.price);
         this.closeDialog(book);
     }
 }

@@ -14,7 +14,6 @@ export class ErroInterceptor implements HttpInterceptor {
     constructor(private mensagemService: MensagemService) {}
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        console.log('interceptando HTTP');
         return next.handle(request).pipe(
             catchError(resposta => this.trataRespostaErro(resposta))
         );

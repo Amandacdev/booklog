@@ -71,14 +71,14 @@ ngOnInit() {
 
 
     dialogRef.afterClosed().subscribe(result => {
-        if(result instanceof Object) {
+        if(result instanceof Object && !isNaN(result.price)) {
             book.title = result.title;
             book.author = result.author;
             book.synopsis = result.synopsis;
             book.price = result.price;
             book.image = result.image;
+            this.mensagemServise.success(`Livro ${book.title} atualizado com sucesso!`);
         }
-        this.mensagemServise.success(`Livro ${book.title} atualizado com sucesso!`);
     });
   }
 
